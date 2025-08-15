@@ -1,0 +1,31 @@
+import pandas as pd
+import numpy as np
+
+data = pd.read_csv(r"C:\Users\Ashish\OneDrive\Pyhton Project file ALL\Project 1 - Weather Dataset.csv")
+
+data.head()
+data.shape
+data.index
+data.columns
+data.dtypes
+data["Weather"].unique()
+data.nunique()
+data.count()
+data["Weather"].value_counts()
+data.info()
+data.describe()
+data.head(2)
+# 1- Check the whole dataframe unique value 
+data.nunique() 
+
+# 2- Check for the any specific coloumn
+data["Wind Speed_km/h"].unique() #Answer
+
+# Value_counts Method
+# data.head(2)
+data.Weather.value_counts()
+
+# Filtring Method
+# data.head(2)
+data[data.Weather == "Clear"]
+
